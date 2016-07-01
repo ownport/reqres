@@ -90,6 +90,5 @@ class HttpRequest(object):
 def get_basic_auth_headers(username, password):
 
     import base64
-    import string
     auth = base64.encodestring('%s:%s' % (username, password)).replace('\n', '')
     return {"Authorization": "Basic %s" % auth}
