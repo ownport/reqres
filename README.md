@@ -9,11 +9,7 @@ Just copy `reqres.py` file. No dependencies required
 ## How to use
 
 ```python
->>> import requests
 >>> import reqres
->>>
->>>
->>>
 >>> headers=reqres.get_basic_auth_headers('user','pass')
 >>> resp = reqres.HttpRequest("http://example.com", headers=headers).get().send()
 >>> resp.body
