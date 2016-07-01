@@ -24,6 +24,10 @@ class HTTPResponse(object):
         self.body = body
         self.error_msg = error_msg
 
+    def json_body(self):
+
+        return json.loads(self.body)
+
 
 class HttpRequest(object):
 
@@ -58,6 +62,11 @@ class HttpRequest(object):
         return self.make_request('POST', data=data)
 
 
+    def post(self, data=None):
+
+        return self.make_request('POST', data=data)
+
+
     def patch(self, data=None):
 
         return self.make_request('PATCH', data=data)
@@ -72,3 +81,15 @@ class HttpRequest(object):
         except urllib2.HTTPError, err:
             return HTTPResponse(code=err.getcode(), error_msg=err.msg,
                                 headers=dict(err.headers.items()), body='\n'.join(err.readlines()))
+
+
+#
+#   Utils
+#
+
+def get_basic_auth_headers(username, password):
+
+    import base64
+    import string
+    auth = base64.encodestring('%s:%s' % (username, password)).replace('\n', '')
+    return {"Authorization": "Basic %s" % auth}
