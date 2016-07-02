@@ -62,9 +62,9 @@ class HttpRequest(object):
         return self.make_request('POST', data=data)
 
 
-    def post(self, data=None):
+    def put(self, data=None):
 
-        return self.make_request('POST', data=data)
+        return self.make_request('PUT', data=data)
 
 
     def patch(self, data=None):
