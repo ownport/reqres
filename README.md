@@ -1,5 +1,7 @@
 # reqres
 
+[![Build Status](https://travis-ci.org/ownport/reqres.svg?branch=master)](https://travis-ci.org/ownport/reqres)
+
 Very simple python lib for HTTP Request/Response
 
 ## Installation
