@@ -1,6 +1,7 @@
 # reqres
 
 [![Build Status](https://travis-ci.org/ownport/reqres.svg?branch=master)](https://travis-ci.org/ownport/reqres)
+[![codecov](https://codecov.io/gh/ownport/reqres/branch/master/graph/badge.svg)](https://codecov.io/gh/ownport/reqres)
 
 Very simple python lib for HTTP Request/Response
 
