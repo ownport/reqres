@@ -87,6 +87,10 @@ def test_httprequest_create(monkeypatch):
     assert isinstance(req, reqres.Request)
     assert req.headers == {'k1':'v1'}
 
+    req = reqres.Request(u'http://example.com', headers={'k1':'v1'})
+    assert isinstance(req, reqres.Request)
+    assert req.headers == {'k1':'v1'}
+
 
 def test_httprequest_get(monkeypatch):
 
